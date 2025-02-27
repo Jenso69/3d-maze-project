@@ -9,7 +9,7 @@ public class Traps : MonoBehaviour
         //only destoy if collactable
         if (other.CompareTag("Collectable"))
         {
-            Destroy(other.gameObject);
+            //Destroy(other.gameObject);
         }
 
 

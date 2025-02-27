@@ -6,6 +6,9 @@ public class PlayerCollection : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        if (other.CompareTag("Collectable"))
+        {
+            Destroy(other.gameObject);
+        }
     }
 }

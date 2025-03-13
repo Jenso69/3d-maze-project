@@ -6,10 +6,11 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     //we put information at the start of a class
-    public int health = 100;
+    
     public float speed = 4.5f;
+    public float jumpForce = 5;
     public string hero = "Jenso";
-    public bool isAlive = true;
+    
     // Start is called before the first frame update
 
 
@@ -24,11 +25,15 @@ public class PlayerMovement : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         //transform.Translate(direction * Time.deltaTime * speed);
+        Vector3 velocity = direction * speed;
+        velocity.y = playerRB.linearVelocity.y;
 
-        playerRB.linearVelocity = direction * speed;
+
+
+        playerRB.linearVelocity = velocity;
 
 
 
@@ -48,5 +53,22 @@ public class PlayerMovement : MonoBehaviour
         );
     }
 
+
+
+    private void OnJump (InputValue value)
+    {
+
+        //physics.Raycast will cast a line that can hit colliders if it finds a collider it returns true, if it doesnt, it returns false.
+
+        bool isGrounded = Physics.Raycast(transform.position, Vector3.down, 0.6f);
+
+        if (isGrounded)
+        
+        {
+            playerRB.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+        }
+
+
+    }
 
 }    

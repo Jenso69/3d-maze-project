@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5153797369593127002
+--- !u!1 &4262670005649902924
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4952544231414320769}
-  - component: {fileID: 8613896090563737664}
-  - component: {fileID: 3585168391923886935}
-  - component: {fileID: 7969861101753743513}
-  - component: {fileID: 5909244074758690949}
+  - component: {fileID: 9098268792514572772}
+  - component: {fileID: 7158268701480953278}
+  - component: {fileID: 6082720134683965316}
+  - component: {fileID: 5098558430118303443}
+  - component: {fileID: 8675242532844795777}
   m_Layer: 0
-  m_Name: collectable
-  m_TagString: Collectable
+  m_Name: FireballShooter
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4952544231414320769
+--- !u!4 &9098268792514572772
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5153797369593127002}
+  m_GameObject: {fileID: 4262670005649902924}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.9257, y: 0.428, z: 1.937}
-  m_LocalScale: {x: 0.5915, y: 0.5129366, z: 0.4983}
+  m_LocalPosition: {x: -0.06, y: 2.81, z: -0.64}
+  m_LocalScale: {x: 1, y: 1, z: 0.10914751}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8613896090563737664
+--- !u!33 &7158268701480953278
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5153797369593127002}
+  m_GameObject: {fileID: 4262670005649902924}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3585168391923886935
+--- !u!23 &6082720134683965316
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5153797369593127002}
+  m_GameObject: {fileID: 4262670005649902924}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -66,7 +66,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0d7e52117b888b44aacaf9bcece93070, type: 2}
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -88,13 +88,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7969861101753743513
+--- !u!65 &5098558430118303443
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5153797369593127002}
+  m_GameObject: {fileID: 4262670005649902924}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -103,22 +103,24 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5909244074758690949
+--- !u!114 &8675242532844795777
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5153797369593127002}
+  m_GameObject: {fileID: 4262670005649902924}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec1b2cc4196f69d4595d8acb5b5ff71f, type: 3}
+  m_Script: {fileID: 11500000, guid: f6a83a400f370c7419f8ea7cc95bd874, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 45
+  fireballPrefab: {fileID: 1078663894107584515, guid: 895b8690657c23b46a17a752eb1a0917,
+    type: 3}
+  spawnTimer: 1

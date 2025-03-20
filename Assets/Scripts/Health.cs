@@ -23,14 +23,23 @@ public class Health : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
+
+
         if (other.CompareTag("Trap"))
         {
 
         Damage(1);
 
-
-   
         }
+
+        if (other.CompareTag("Fireball"))
+        {
+            Damage(2);
+            Destroy(other.gameObject);
+
+        }
+
 
         if (other.CompareTag("Checkpoint"))
         {
